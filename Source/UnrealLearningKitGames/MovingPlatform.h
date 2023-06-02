@@ -25,7 +25,6 @@ public:
 
 private:
 
-	void MovePlatform(float DeltaTime);
 	
 	UPROPERTY(EditAnywhere, Category = "Moving Platform")
 	FVector PlatformVelocity = FVector(100, 0, 0);
@@ -53,6 +52,11 @@ private:
 	// UPROPERTY(EditAnywhere)
 	// bool MyBool = true;
 
+	void MovePlatform(float DeltaTime);
 	void RotatePlatform(float DeltaTime);
+
+	bool ShouldPlatformReturn();
+
+	float GetDistanceMoved();
 
 };
