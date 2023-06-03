@@ -26,37 +26,22 @@ public:
 private:
 
 	
-	UPROPERTY(EditAnywhere, Category = "Moving Platform")
+	UPROPERTY(EditAnywhere, Category = "Moving")
 	FVector PlatformVelocity = FVector(100, 0, 0);
 
-	UPROPERTY(EditAnywhere, Category = "Moving Platform")
+	UPROPERTY(EditAnywhere, Category = "Moving")
 	float MoveDistance = 100;
 
-	// UPROPERTY(VisibleAnywhere, Category = "Moving Platform")
-	// float DistanceMoved = -1;
+	UPROPERTY(EditAnywhere, Category = "Rotation")
+	FRotator RotationVelocity;
 
 	FVector StartLocation;
-
-	// UPROPERTY(EditAnywhere)
-	// int32 MyInt2 = 99;
-
-	// UPROPERTY(EditAnywhere)
-	// float InputFloatA = 0;
-
-	// UPROPERTY(EditAnywhere)
-	// float InputFloatB = 0;
-
-	// UPROPERTY(EditAnywhere)
-	// float A_Plus_B_Float = 0;
-
-	// UPROPERTY(EditAnywhere)
-	// bool MyBool = true;
 
 	void MovePlatform(float DeltaTime);
 	void RotatePlatform(float DeltaTime);
 
-	bool ShouldPlatformReturn();
+	bool ShouldPlatformReturn() const;
 
-	float GetDistanceMoved();
+	float GetDistanceMoved() const;
 
 };
